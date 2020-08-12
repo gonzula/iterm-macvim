@@ -11,10 +11,13 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
+    
+    var openedFile = false
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("applicationDidFinishLaunching")
-//        openFile(url: URL(fileURLWithPath: "/tmp/\(UUID().uuidString)"))
+        guard !openedFile else {exit(0)}
+        openFile(url: URL(fileURLWithPath: "/tmp/\(UUID().uuidString)"))
         exit(0)
     }
     
@@ -37,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func openFile(url: URL) {
+        openedFile = true
         let fullPath = url.path
         let directoryPath = (fullPath as NSString).deletingLastPathComponent
         let fileName = (fullPath as NSString).lastPathComponent
