@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppleDockMenu</key>
+	<string>DockMenu</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>
@@ -493,7 +495,7 @@
 			<key>CFBundleTypeExtensions</key>
 			<array>
 				<string>js</string>
-				<string>htc</string>
+				<string>json</string>
 				<string>jscript</string>
 				<string>javascript</string>
 			</array>
@@ -1370,7 +1372,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSUIElement</key>
-	<true/>
+	<false/>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>Required to open vim</string>
 	<key>NSHumanReadableCopyright</key>
@@ -1835,7 +1837,7 @@
 				<key>public.filename-extension</key>
 				<array>
 					<string>js</string>
-					<string>htc</string>
+					<string>json</string>
 					<string>jscript</string>
 					<string>javascript</string>
 				</array>

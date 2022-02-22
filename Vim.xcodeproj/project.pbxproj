@@ -68,6 +68,7 @@
 		9F45ED0624E4AAE600F208CB /* MacVim-vim.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9F45ECCA24E4AAE600F208CB /* MacVim-vim.icns */; };
 		9F45ED0724E4AAE600F208CB /* MacVim-hs.icns in Resources */ = {isa = PBXBuildFile; fileRef = 9F45ECCB24E4AAE600F208CB /* MacVim-hs.icns */; };
 		9F45ED0924E4AF3200F208CB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F45ED0824E4AF3200F208CB /* main.swift */; };
+		9F45ED0D24E4B5BF00F208CB /* DockMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F45ED0C24E4B5BF00F208CB /* DockMenu.xib */; };
 		9FAF28DD24E45A6B0024F52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF28DC24E45A6B0024F52D /* AppDelegate.swift */; };
 		9FAF28DF24E45A6D0024F52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF28DE24E45A6D0024F52D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		9F45ECCA24E4AAE600F208CB /* MacVim-vim.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "MacVim-vim.icns"; sourceTree = "<group>"; };
 		9F45ECCB24E4AAE600F208CB /* MacVim-hs.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "MacVim-hs.icns"; sourceTree = "<group>"; };
 		9F45ED0824E4AF3200F208CB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
+		9F45ED0C24E4B5BF00F208CB /* DockMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DockMenu.xib; sourceTree = SOURCE_ROOT; };
 		9FAF28D924E45A6B0024F52D /* Vim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FAF28DC24E45A6B0024F52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FAF28DE24E45A6D0024F52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		9FAF28DB24E45A6B0024F52D /* Vim */ = {
 			isa = PBXGroup;
 			children = (
+				9F45ED0C24E4B5BF00F208CB /* DockMenu.xib */,
 				9F45ED0824E4AF3200F208CB /* main.swift */,
 				9FAF28DC24E45A6B0024F52D /* AppDelegate.swift */,
 				9FAF28DE24E45A6D0024F52D /* Assets.xcassets */,
@@ -351,6 +354,7 @@
 				9F45ECE924E4AAE600F208CB /* MacVim-asp.icns in Resources */,
 				9F45ECCD24E4AAE600F208CB /* MacVim.icns in Resources */,
 				9F45ECFA24E4AAE600F208CB /* MacVim-fscript.icns in Resources */,
+				9F45ED0D24E4B5BF00F208CB /* DockMenu.xib in Resources */,
 				9F45ECFE24E4AAE600F208CB /* MacVim-mm.icns in Resources */,
 				9F45ECF524E4AAE600F208CB /* MacVim-ps.icns in Resources */,
 				9F45ECEF24E4AAE600F208CB /* MacVim-xsl.icns in Resources */,

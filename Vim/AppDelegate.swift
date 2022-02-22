@@ -10,37 +10,41 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    @IBOutlet weak var window: NSWindow!
+//    @IBOutlet weak var window: NSWindow!
     
-    var openedFile = false
+    var alreadyFinishedLaunching = false
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("applicationDidFinishLaunching")
-        guard !openedFile else {exit(0)}
+        alreadyFinishedLaunching = true
+    }
+    
+    func applicationOpenUntitledFile(_ sender: NSApplication) -> Bool {
+        guard alreadyFinishedLaunching else {return false}
         openFile(url: URL(fileURLWithPath: "/tmp/\(UUID().uuidString)"))
-        exit(0)
+        return true
+    }
+    
+    @IBAction func newPythonScript(_ sender: NSMenuItem) {
+        openFile(url: URL(fileURLWithPath: "/tmp/\(UUID().uuidString).py"))
     }
     
     func application(_ sender: Any, openFileWithoutUI filename: String) -> Bool {
         openFile(url: URL(fileURLWithPath: filename))
         return true
-        // exit(0)
     }
     
     func application(_ application: NSApplication, open urls: [URL]) {
         urls.forEach(openFile(url:))
-        // exit(0)
     }
     
     func application(_ sender: NSApplication, openFiles filenames: [String]) {
         filenames
             .compactMap(URL.init(fileURLWithPath:))
             .forEach(openFile(url:))
-        // exit(0)
     }
     
     func openFile(url: URL) {
-        openedFile = true
         let fullPath = url.path
         let directoryPath = (fullPath as NSString).deletingLastPathComponent
         let fileName = (fullPath as NSString).lastPathComponent
@@ -69,11 +73,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print(getPathScript)
 
         var error: NSDictionary?
-        guard let scriptObject = NSAppleScript(source: getPathScript) else {exit(1)}
+        guard let scriptObject = NSAppleScript(source: getPathScript) else {return}
         let output = scriptObject.executeAndReturnError(&error)
         guard error == nil else {
             print(error!)
-            exit(1)
+            return
         }
         guard let returnValue = output.stringValue else {return}
         print(returnValue)
