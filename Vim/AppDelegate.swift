@@ -58,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         -- set fileName to quoted form of POSIX path of \(fileName)
         
         -- set theCmd to " cd " & dirPath & ";clear; pwd"
-        set theCmd to " cd '\(directoryPath)' ;clear; pwd; nvim '\(fileName)'; exit"
+        set theCmd to " source ~/venv/bin/activate; cd '\(directoryPath)' ;clear; pwd; nvim '\(fileName)'; exit"
 
            tell application "iTerm"
                create window with default profile
